@@ -40,6 +40,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [super setTitle:@"Menu"];
+    //title color
+	self.navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName: [UIColor customOrange] };
+    self.view.backgroundColor = [UIColor customBlue];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,9 +72,13 @@
     // Configure the cell...
     //value
 	cell.textLabel.text = [self mainMenuModel][indexPath.row];
-	cell.textLabel.font  = [UIFont fontWithName:@"HelveticaNeue-Thin" size:18.0f];
 	//value
     
+    //style
+    cell.textLabel.font  = [UIFont fontWithName:@"HelveticaNeue-Ligth" size:22.0f];
+    cell.textLabel.textColor = [UIColor customWhite];
+    cell.backgroundColor = [UIColor customOrange];
+    //style
     return cell;
 }
 
@@ -102,53 +109,11 @@
     [navController setViewControllers:newStack];
 
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+	UILabel *tempView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 2)];
+	tempView.text = @"";
+	tempView.backgroundColor = [UIColor customOrange];
+    return tempView;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

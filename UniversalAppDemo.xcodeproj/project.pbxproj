@@ -27,6 +27,7 @@
 		B7C3965618FDCC3700BB91F8 /* RedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C3965518FDCC3700BB91F8 /* RedViewController.m */; };
 		B7C3965918FDCC4300BB91F8 /* GreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C3965818FDCC4300BB91F8 /* GreenViewController.m */; };
 		B7C3965C18FDCC4E00BB91F8 /* BlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C3965B18FDCC4E00BB91F8 /* BlueViewController.m */; };
+		B7FA92671916CA0F000CFE2B /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FA92661916CA0F000CFE2B /* UIColor+CustomColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		B7C3965818FDCC4300BB91F8 /* GreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenViewController.m; sourceTree = "<group>"; };
 		B7C3965A18FDCC4E00BB91F8 /* BlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueViewController.h; sourceTree = "<group>"; };
 		B7C3965B18FDCC4E00BB91F8 /* BlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueViewController.m; sourceTree = "<group>"; };
+		B7FA92651916CA0F000CFE2B /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		B7FA92661916CA0F000CFE2B /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,7 @@
 		B7C3961818FDBADD00BB91F8 /* UniversalAppDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B7FA92681916CA15000CFE2B /* Categories */,
 				B7C3964A18FDBB0100BB91F8 /* Delegate */,
 				B7C3964C18FDBB1D00BB91F8 /* View */,
 				B7C3964B18FDBB1200BB91F8 /* Controller */,
@@ -198,10 +202,15 @@
 		B7C3964D18FDBE8000BB91F8 /* iPad */ = {
 			isa = PBXGroup;
 			children = (
-				B7C3964E18FDBEAA00BB91F8 /* LeftViewController.h */,
-				B7C3964F18FDBEAA00BB91F8 /* LeftViewController.m */,
-				B7C3965118FDBFB100BB91F8 /* RightViewController.h */,
-				B7C3965218FDBFB100BB91F8 /* RightViewController.m */,
+				B7FA92641916C9BE000CFE2B /* SplitView */,
+				B7FA92631916C9B6000CFE2B /* Views */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		B7FA92631916C9B6000CFE2B /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				B7C3965418FDCC3700BB91F8 /* RedViewController.h */,
 				B7C3965518FDCC3700BB91F8 /* RedViewController.m */,
 				B7C3965718FDCC4300BB91F8 /* GreenViewController.h */,
@@ -209,7 +218,27 @@
 				B7C3965A18FDCC4E00BB91F8 /* BlueViewController.h */,
 				B7C3965B18FDCC4E00BB91F8 /* BlueViewController.m */,
 			);
-			name = iPad;
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B7FA92641916C9BE000CFE2B /* SplitView */ = {
+			isa = PBXGroup;
+			children = (
+				B7C3964E18FDBEAA00BB91F8 /* LeftViewController.h */,
+				B7C3964F18FDBEAA00BB91F8 /* LeftViewController.m */,
+				B7C3965118FDBFB100BB91F8 /* RightViewController.h */,
+				B7C3965218FDBFB100BB91F8 /* RightViewController.m */,
+			);
+			name = SplitView;
+			sourceTree = "<group>";
+		};
+		B7FA92681916CA15000CFE2B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B7FA92651916CA0F000CFE2B /* UIColor+CustomColors.h */,
+				B7FA92661916CA0F000CFE2B /* UIColor+CustomColors.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +342,7 @@
 				B7C3965318FDBFB100BB91F8 /* RightViewController.m in Sources */,
 				B7C3962C18FDBADD00BB91F8 /* ViewController.m in Sources */,
 				B7C3965018FDBEAA00BB91F8 /* LeftViewController.m in Sources */,
+				B7FA92671916CA0F000CFE2B /* UIColor+CustomColors.m in Sources */,
 				B7C3962318FDBADD00BB91F8 /* AppDelegate.m in Sources */,
 				B7C3965618FDCC3700BB91F8 /* RedViewController.m in Sources */,
 				B7C3965918FDCC4300BB91F8 /* GreenViewController.m in Sources */,
@@ -532,6 +562,7 @@
 				B7C3964618FDBADD00BB91F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7C3964718FDBADD00BB91F8 /* Build configuration list for PBXNativeTarget "UniversalAppDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +571,7 @@
 				B7C3964918FDBADD00BB91F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
